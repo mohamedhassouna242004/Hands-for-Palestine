@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Pa.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Palestine ❤️</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the best place</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="history">
+            <h2>History of Palestine</h2>
+            <p>In 1967, the Israeli army occupied the West Bank of the Jordan River, which was at that time part of Jordan. They also occupied the Gaza Strip, the Sinai Peninsula, the Syrian Golan Heights, and other areas in the north of Jordan. This war became known as the Six-Day War, and it entered the Palestinian lexicon as the <b>'Naksa'</b> <b>(Setback)</b>. Israel occupied Sinai.</p>
+        </section>
+        <section id="images">
+            <h2>Images</h2>
+            <div class="gallery-wrap">
+                <img src="back.png" alt="Back" id="backbtn">
+                <div class="gallery">
+                    <div>
+                        <span><img src="1.jpg" alt="Palestine Image 1"></span>
+                        <span><img src="2.jpg" alt="Palestine Image 2"></span>
+                        <span><img src="3.jpg" alt="Palestine Image 3"></span>
+                    </div>
+                    <div>
+                        <span><img src="6.jpg" alt="Palestine Image 6"></span>
+                        <span><img src="7.avif" alt="Palestine Image 7"></span>
+                        <span><img src="4.jpg" alt="Palestine Image 4"></span>
+                    </div>
+                </div>
+                <img src="next.png" alt="Next" id="nextbtn">
+            </div>
+        </section>
+        <section id="donate">
+            <h2>Donate now</h2>
+            <button class="btn" onclick="redirectToDonatePage()">Donate</button>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2024 Palestine, Mohamed Hassouna . All rights reserved. </p>
+        
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const scrollContainer = document.querySelector(".gallery");
+            const backbtn = document.getElementById("backbtn");
+            const nextbtn = document.getElementById("nextbtn");
+
+            scrollContainer.addEventListener("wheel", (evt) => {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+                scrollContainer.style.scrollBehavior = "auto";
+            });
+
+            nextbtn.addEventListener("click", () => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft += 900;
+            });
+
+            backbtn.addEventListener("click", () => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft -= 900;
+            });
+        });
+
+        function redirectToDonatePage() {
+            window.location.href = "indexx.html";
+        }
+    </script>
+</body>
+</html>

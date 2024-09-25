@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="donate-and-charity-flat-color-icon-helping-hand-money-png.webp">
+    <link rel="stylesheet" href="style1.css">
+    <script src="verif{.js" defer></script>
+    <title>Donate</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="flag.mp4" type="video/mp4">
+    </video>
+    <form id="donationForm">
+        <fieldset>
+            <legend>Donate Now</legend>
+            <table>
+                <tr>
+                    <td><label for="nom">Nom:</label></td>
+                    <td><input type="text" id="nom" name="nom" required></td>
+                </tr>
+                <tr>
+                    <td><label for="prenom">Prenom:</label></td>
+                    <td><input type="text" id="prenom" name="prenom" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="amount">Donation Amount:</label></td>
+                    <td><input type="number" id="amount" name="amount" required></td>
+                </tr>
+                <tr>
+                    <td><label for="payment">Payment Method:</label></td>
+                    <td>
+                        <select id="payment" name="payment" required>
+                            <option value="credit">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank">Bank Transfer</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <button type="submit" class="btn">Send</button>
+    </form>
+</body>
+</html>
